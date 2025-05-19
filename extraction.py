@@ -45,7 +45,7 @@ def test_extractor():
     Test the DataExtractor with various test cases.
     """
     extractor = Data-Extractor()
-    
+
     # Test cases
     test_text = """
     For support, email us at help@example.com or support.team@company.co.uk
@@ -57,9 +57,9 @@ def test_extractor():
     Tags: #Python #Coding #RegEx
     Prices: $19.99 and $1,234.56
     """
-    
+
     results = extractor.extract_data(test_text)
-    
+
     # Print results in a formatted way
     print("\nExtraction Results:")
     print("=" * 50)
@@ -78,17 +78,17 @@ def main():
     """
     print("RegEx Data Extraction Tool")
     print("=" * 50)
-    
+
     extractor = Data-Extractor()
-    
+
     while True:
         print("\nOptions:")
         print("1. Test with sample data")
         print("2. Enter custom text")
         print("3. Exit")
-        
+
         choice = input("\nEnter your choice (1-3): ")
-        
+
         if choice == '1':
             test_extractor()
         elif choice == '2':
@@ -99,10 +99,10 @@ def main():
                 if line == "":
                     break
                 lines.append(line)
-            
+
             text = "\n".join(lines)
             results = extractor.extract_data(text)
-            
+
             print("\nResults:")
             print("=" * 50)
             for pattern_type, matches in results.items():
@@ -115,7 +115,8 @@ def main():
         elif choice == '3':
             print("\nThank you for using the RegEx Data Extraction Tool!")
             break
-        else:
+
+            else:
             print("\nInvalid choice. Please try again.")
 
 if __name__ == "__main__":
